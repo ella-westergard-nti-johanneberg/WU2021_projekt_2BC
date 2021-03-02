@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrapper_om_oss{
+    display: grid;
+    width: 100vw;
+    height: 400vh;
+    grid-template-areas:
+    "he he he he he"
+    "na na na na na"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s2 s2 s2 s3 s3"
+    "s2 s2 s2 s3 s3"
+    "s2 s2 s2 s3 s3"
+    "s4 s4 s5 s5 s5"
+    "s4 s4 s5 s5 s5"
+    "s4 s4 s5 s5 s5"
+    "s6 s6 s6 s7 s7"
+    "s6 s6 s6 s7 s7"
+    "s6 s6 s6 s7 s7"
+    "fo fo fo fo fo"
+    "fo fo fo fo fo";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+}
+.crossfitwellness{
+    grid-area: he;
+    background-color:#1d2d50;
+    color: snow;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.meny{
+    grid-area: na;
+    background-color: gray;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+}
+.varnarhur{
+    grid-area: s1;
+    background-color: snow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.varnarhur>img{
+    height: 400px;
+    width: 600px;
+}
+.varnarhur>h2{
+    padding-top: 30px;
+    font-size:30px;
+}
+.open_gym_bild{
+    grid-area: s2;
+}
+.open_gym{
+    grid-area: s3;
+    background-color:gray;
+    color: snow;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trana_olika_klasser{
+    grid-area: s4;
+    background-color:gray;
+    color: snow;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trana_olika_klasser_bild{
+    grid-area: s5;
+}
+.trana_hemma_bild{
+    grid-area: s6;
+}
+.trana_hemma{
+    grid-area: s7;
+    background-color: gray;
+    color: snow;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#kontakta_oss{
+    grid-area: fo;
+    display: grid;
+    grid-template-areas:
+    "d1 d2 d3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 1fr;
+
+    background-color:#1d2d50;
+    color: snow;
+}
+.kontakt{
+    grid-area: d1;
+    display: flex;
+    align-items: center;
+}
+.mail{
+    grid-area: d2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.telefon{
+    grid-area: d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: snow;
+}
+a:hover{
+    color: darkgray;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.menu{
+    display: none;
+}
+.menu-button{
+    display: none;
+}
+.fade-layer{
+    display: none;
+}
+@media screen and (max-width: 850px){
+    #wrapper_om_oss{
+    display: grid;
+    width: 100vw;
+    height: 400vh;
+    grid-template-areas:
+    "he he"
+    "s1 s1"
+    "s1 s1"
+    "s1 s1"
+    "s2 s3"
+    "s2 s3"
+    "s4 s5"
+    "s4 s5"
+    "s6 s7"
+    "s6 s7"
+    "fo fo"
+    "fo fo"
+    "fo fo";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+        
+    .menu-button{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+
+    }
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    .meny{
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background: hotpink;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+    }
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    .show{
+        left: 0;
+    }
+
+    .fade-layer.visible{
+        display: block;
+    }
+    .crossfitwellness{
+        grid-area: he;
+        background-color:#1d2d50;
+        color: snow;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+    .varnarhur{
+        grid-area: s1;
+        background-color: snow;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .varnarhur>img{
+        height: 400px;
+        width: 600px;
+    }
+    .varnarhur>h2{
+        padding-top: 30px;
+        font-size:30px;
+    }
+    .open_gym_bild{
+        grid-area: s2;
+    }
+    .open_gym{
+        grid-area: s3;
+        background-color:gray;
+        color: snow;
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .trana_olika_klasser{
+        grid-area: s4;
+        background-color:gray;
+        color: snow;
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .trana_olika_klasser_bild{
+        grid-area: s5;
+    }
+    .trana_hemma_bild{
+        grid-area: s6;
+    }
+    .trana_hemma{
+        grid-area: s7;
+        background-color: gray;
+        color: snow;
+        font-size: xx-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #kontakta_oss{
+        grid-area: fo;
+        display: grid;
+        grid-template-areas:
+        "d1 d2 d3";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr, 1fr;
+    
+        background-color:#1d2d50;
+        color: snow;
+    }
+    .kontakt{
+        grid-area: d1;
+        display: flex;
+        align-items: center;
+    }
+    .mail{
+        grid-area: d2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .telefon{
+        grid-area: d3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    a{
+        color: snow;
+    }
+    a:hover{
+        color: darkgray;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+}
