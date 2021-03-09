@@ -2,7 +2,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-#wrapper_om_oss{
+.wrapper_om_oss{
     display: grid;
     width: 100vw;
     height: 400vh;
@@ -29,7 +29,7 @@
 }
 .crossfitwellness{
     grid-area: he;
-    background-color:#1d2d50;
+    background-color:#393e46;
     color: snow;
 
     display: flex;
@@ -37,7 +37,7 @@
     align-items: center;
     font-size: 50px;
 }
-.meny{
+.nav{
     grid-area: na;
     background-color: gray;
 
@@ -107,13 +107,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr, 1fr;
 
-    background-color:#1d2d50;
+    background-color:#393e46;
     color: snow;
 }
 .kontakt{
     grid-area: d1;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .mail{
     grid-area: d2;
@@ -151,10 +152,8 @@ img {
     display: none;
 }
 @media screen and (max-width: 850px){
-    #wrapper_om_oss{
+    .wrapper_om_oss{
     display: grid;
-    width: 100vw;
-    height: 400vh;
     grid-template-areas:
     "he he"
     "s1 s1"
@@ -186,7 +185,7 @@ img {
     .menu-button i.material-icons{
         font-size: 2.5rem;
     }
-    .meny{
+    .nav{
         display: none;
     }
     .menu{
@@ -212,6 +211,7 @@ img {
     }
     .show{
         left: 0;
+        display: block;
     }
 
     .fade-layer.visible{
@@ -219,7 +219,7 @@ img {
     }
     .crossfitwellness{
         grid-area: he;
-        background-color:#1d2d50;
+        background-color:#393e46;
         color: snow;
     
         display: flex;
@@ -288,7 +288,7 @@ img {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr, 1fr;
     
-        background-color:#1d2d50;
+        background-color:#393e46;
         color: snow;
     }
     .kontakt{
@@ -323,4 +323,73 @@ img {
         object-position: center;
     }
 
+}
+.wrapper_bli_medlem{
+    display: grid;
+    width: 100vw;
+    height: 300vh;
+    grid-template-areas:
+    "he he"
+    "na na"
+    "s1 s1"
+    "s1 s1"
+    "s1 s1"
+    "s1 s1"
+    "s2 s3"
+    "s2 s3"
+    "s2 s3"
+    "s4 s5"
+    "s4 s5"
+    "s4 s5"
+    "fo fo"
+    "fo fo";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+}
+.bli_medlem{
+    grid-area: s1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bli_medlem>img{
+    height: 400px;
+    width: 700px;
+}
+.bli_medlem>h2{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 50px;
+}
+.studentmedlemskap{
+    grid-area: s2;
+}
+.arskort{
+    grid-area: s3;
+}
+.seniormedlemskap{
+    grid-area: s4;
+}
+.manadskort{
+    grid-area: s5;
+}
+#medlemskap{
+    background-color: grey;
+    color: snow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.border{
+    width: 500px;
+    height: 250px;
+    border-style: double;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.border>h2{
+    padding-bottom: 10px;
 }
