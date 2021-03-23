@@ -66,7 +66,7 @@
 .open_gym_bild{
     grid-area: s2;
 }
-.open_gym{
+.trana_open_gym{
     grid-area: s3;
     background-color:gray;
     color: snow;
@@ -393,39 +393,224 @@ img {
     background-color: snow;
     display: grid;
     grid-template-areas:
-    "ru"
+    "gr"
     "g1"
     "g2"
     "g3";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4,1fr);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction:column ;
+    padding: 40px;
 }
 .stockholm{
     grid-area: s2;
     background-color: snow;
+    display: grid;
+    grid-template-areas:
+    "sr"
+    "s1"
+    "s2"
+    "s3";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    padding: 40px;
 }
 .malmo{
     grid-area: s3;
     background-color: snow;
+    display: grid;
+    grid-template-areas:
+    "mr"
+    "m1"
+    "m2"
+    "m3";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    padding: 40px;
 }
 #goteborg-rubrik{
-    grid-area: ru;
+    grid-area: gr;
+    background-color: #393e46;
+    color: snow;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 50px;
+    align-items: center;
+    height: 75px;
 }
 .goteborg1{
     grid-area: g1;
-    width: 300px;
-    height: 200px;
-    border-style: double;
+    background-color: grey;
+    color: snow;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    height: 150px;
+}
+.goteborg2{
+    grid-area: g2;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+.goteborg3{
+    grid-area: g3;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+#stockholm-rubrik{
+    grid-area: sr;
+    background-color: #393e46;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+.stockholm1{
+    grid-area: s1;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+.stockholm2{
+    grid-area: s2;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+.stockholm3{
+    grid-area: s3;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+#malmo-rubrik{
+    grid-area: mr;
+    background-color: #393e46;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+.malmo1{
+    grid-area: m1;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+.malmo2{
+    grid-area: m2;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+.malmo3{
+    grid-area: m3;
+    background-color: grey;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+}
+@media screen and (max-width: 850px){
+    .wrapper_hitta_traningscenter{
+        display: grid;
+        grid-template-areas:
+        "he he he"
+        "he he he"
+        "s1 s1 s1"
+        "s2 s2 s2"
+        "s3 s3 s3"
+        "fo fo fo"
+        "fo fo fo";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+        
+    .menu-button{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+
+    }
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    .nav{
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        font-size: 25px;
+    }
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    .show{
+        left: 0;
+        display: block;
+    }
+    .fade-layer.visible{
+        display: block;
+    }
+    .goteborg{
+        height: 600px;
+    }
+    .stockholm{
+        height: 600px;
+    }
+    .malmo{
+        height: 600px;
+    }
 }
