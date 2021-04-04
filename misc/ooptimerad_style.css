@@ -1,0 +1,975 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 850px){
+    img{ 
+        max-width: 100vw;
+    }
+    h2{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    .kontakta_oss{
+        display: flex;
+        justify-content: space-between;
+    }
+    .kontakt{
+        font-size: 25px;
+    }
+    .mail>h5{
+        font-size: 20px;
+    }
+    .telefon>h5{
+        font-size: 20px;
+    }
+}
+.wrapper_om_oss{
+    display: grid;
+    width: 100%;
+    height: 400vh;
+    grid-template-areas:
+    "he he he he he"
+    "na na na na na"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s1 s1 s1 s1 s1"
+    "s2 s2 s2 s3 s3"
+    "s2 s2 s2 s3 s3"
+    "s4 s4 s5 s5 s5"
+    "s4 s4 s5 s5 s5"
+    "s6 s6 s6 s7 s7"
+    "s6 s6 s6 s7 s7"
+    "fo fo fo fo fo"
+    "fo fo fo fo fo";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+}
+.crossfitwellness{
+    grid-area: he;
+    background-color:#393e46;
+    color: snow;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.nav{
+    grid-area: na;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+    background-color: #4C5762;  
+}
+.varnarhur{
+    grid-area: s1;
+    background-color: snow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.varnarhur>img{
+    height: 400px;
+    width: 600px;
+}
+.varnarhur>h2{
+    padding-top: 30px;
+    font-size:30px;
+}
+.open_gym_bild{
+    grid-area: s2;
+    background-color: #4C5762;
+}
+.trana_open_gym{
+    grid-area: s3;
+    background-color:#4C5762;
+    color: snow;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trana_olika_klasser{
+    grid-area: s4;
+    background-color:#4C5762;
+    color: snow;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trana_olika_klasser_bild{
+    grid-area: s5;
+    background-color: #4C5762;
+}
+.trana_hemma_bild{
+    grid-area: s6;
+    background-color: #4C5762;
+}
+.trana_hemma{
+    grid-area: s7;
+    background-color: #4C5762;
+    color: snow;
+    font-size:xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kontakta_oss{
+    grid-area: fo;
+    display: grid;
+    grid-template-areas:
+    "d1 d2 d3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color:#393e46;
+    color: snow;
+    font-size: 30px;
+}
+    
+.kontakt{
+    grid-area: d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mail{
+    grid-area: d2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.telefon{
+    grid-area: d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mail p{
+    font-size: 20px;
+}
+.telefon p{
+    font-size: 20px;
+}
+a{
+    color: snow;
+}
+a:hover{
+    color: darkgray;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.menu{
+    display: none;
+}
+.menu-button{
+    display: none;
+}
+.fade-layer{
+    display: none;
+}
+@media screen and (max-width: 850px){
+    .wrapper_om_oss{
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "he he"
+    "s1 s1"
+    "s2 s3"
+    "s4 s5"
+    "s6 s7"
+    "fo fo";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+        
+    .menu-button{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+
+    }
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    .nav{
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        font-size: 25px;
+    }
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    .show{
+        left: 0;
+        display: block;
+    }
+
+    .fade-layer.visible{
+        display: block;
+    }
+    .crossfitwellness{
+        grid-area: he;
+        background-color:#393e46;
+        color: snow;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+    .trana_hemma_bild{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .trana_olika_klasser_bild{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .open_gym_bild{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+.wrapper_bli_medlem{
+    display: grid;
+    width: 100%;
+    height: 300vh;
+    grid-template-areas:
+    "he he"
+    "na na"
+    "s1 s1"
+    "s1 s1"
+    "s1 s1"
+    "s1 s1"
+    "s2 s3"
+    "s2 s3"
+    "s2 s3"
+    "s4 s5"
+    "s4 s5"
+    "s4 s5"
+    "fo fo"
+    "fo fo";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+}
+.bli_medlem{
+    grid-area: s1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bli_medlem>img{
+    height: 400px;
+    width: 700px;
+}
+.bli_medlem>h3{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 50px;
+}
+.studentmedlemskap{
+    grid-area: s2;
+}
+.arskort{
+    grid-area: s3;
+}
+.seniormedlemskap{
+    grid-area: s4;
+}
+.manadskort{
+    grid-area: s5;
+}
+.seniormedlemskap, .manadskort, .studentmedlemskap, .arskort{
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.border{
+    width: 500px;
+    height: 250px;
+    border-style: double;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.border>h4{
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+.border>p{
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 850px){
+    .wrapper_bli_medlem{
+        width: 100%;
+        height: 300vh;
+        display: grid;
+        grid-template-areas:
+        "he"
+        "s1"
+        "s1"
+        "s2"
+        "s2"
+        "s3"
+        "s3"
+        "s4"
+        "s4"
+        "s5"
+        "s5"
+        "fo"
+        "fo";
+       
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+
+    }
+        
+    .menu-button{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+
+    }
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    .nav{
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        font-size: 25px;
+    }
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    .show{
+        left: 0;
+        display: block;
+    }
+
+    .fade-layer.visible{
+        display: block;
+    }
+    .border{
+        border: none;
+        font-size: larger;
+    }
+}
+.wrapper_hitta_traningscenter{
+    display: grid;
+    width: 100%;
+    height: 200vh;
+    grid-template-areas:
+    "he he he"
+    "na na na"
+    "s1 s2 s3"
+    "s1 s2 s3"
+    "s1 s2 s3"
+    "s1 s2 s3"
+    "fo fo fo"
+    "fo fo fo";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+.goteborg{
+    grid-area: s1;
+    background-color: snow;
+    display: grid;
+    grid-template-areas:
+    "gr"
+    "g1"
+    "g2"
+    "g3";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    padding: 40px;
+}
+.stockholm{
+    grid-area: s2;
+    background-color: snow;
+    display: grid;
+    grid-template-areas:
+    "sr"
+    "s1"
+    "s2"
+    "s3";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    padding: 40px;
+}
+.malmo{
+    grid-area: s3;
+    background-color: snow;
+    display: grid;
+    grid-template-areas:
+    "mr"
+    "m1"
+    "m2"
+    "m3";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    padding: 40px;
+}
+#goteborg-rubrik{
+    grid-area: gr;
+    background-color: #393e46;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    font-size: x-large;
+}
+.goteborg1{
+    grid-area: g1;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+.goteborg2{
+    grid-area: g2;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+.goteborg3{
+    grid-area: g3;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+#stockholm-rubrik{
+    grid-area: sr;
+    background-color: #393e46;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    font-size: x-large;
+}
+.stockholm1{
+    grid-area: s1;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+.stockholm2{
+    grid-area: s2;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+.stockholm3{
+    grid-area: s3;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+#malmo-rubrik{
+    grid-area: mr;
+    background-color: #393e46;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    font-size: x-large;
+}
+.malmo1{
+    grid-area: m1;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+.malmo2{
+    grid-area: m2;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+.malmo3{
+    grid-area: m3;
+    background-color: #4C5762;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 850px){
+    .wrapper_hitta_traningscenter{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        "he he he"
+        "he he he"
+        "s1 s1 s1"
+        "s2 s2 s2"
+        "s3 s3 s3"
+        "fo fo fo"
+        "fo fo fo";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+        
+    .menu-button{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+
+    }
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    .nav{
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        font-size: 25px;
+    }
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    .show{
+        left: 0;
+        display: block;
+    }
+    .fade-layer.visible{
+        display: block;
+    }
+    .goteborg{
+        height: 600px;
+    }
+    .stockholm{
+        height: 600px;
+    }
+    .malmo{
+        height: 600px;
+    }
+}
+
+.nav h5{
+    font-family: 'Roboto', sans-serif;
+    font-size:larger;
+}
+
+.wrapper_traningsutbud{
+    display: grid;
+    width: 100%;
+    height: 300vh;
+    grid-template-areas:
+    "he he"
+    "na na"
+    "s1 s2"
+    "s1 s2"
+    "s3 s3"
+    "s3 s3"
+    "s3 s3"
+    "fo fo"
+    "fo fo";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+}
+.crossfit_klasser{
+    grid-area: s1;
+    background-color: #393e46;
+    color: snow;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border:double;
+    margin: 50px;
+}
+.crossfit_klasser li{
+    padding: 15px;
+    font-size: larger;
+}
+.crossfit_klasser h3{
+    padding-bottom: 20px;
+    font-size: xx-large;
+}
+.online_klasser{
+    grid-area: s2;
+    background-color: #393e46;
+    color: snow;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border:double;
+    margin: 50px;
+}
+.online_klasser li{
+    padding: 15px;
+    font-size: larger;
+}
+.online_klasser h3{
+    padding-bottom: 20px;
+    font-size: xx-large;
+}
+.open_gym{
+    grid-area: s3;
+    background-color: snow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.open_gym h3{
+    padding: 35px;
+    font-size: 50px;
+}
+img{
+    height: 400px;
+}
+@media screen and (max-width: 850px){
+    .wrapper_traningsutbud{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        "he"
+        "s1"
+        "s1"
+        "s2"
+        "s2"
+        "s3"
+        "s3"
+        "fo";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+        
+    .menu-button{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+
+    }
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    .nav{
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        font-size: 25px;
+    }
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    .show{
+        left: 0;
+        display: block;
+    }
+    .fade-layer.visible{
+        display: block;
+    }
+}
+.wrapper_shop{
+    display: grid;
+    width: 100%;
+    height: 300vh;
+    grid-template-areas:
+    "he he he"
+    "na na na"
+    "s1 s2 s3"
+    "s1 s2 s3"
+    "s4 s5 s6"
+    "s4 s5 s6"
+    "s7 s8 s9"
+    "s7 s8 s9"
+    "fo fo fo";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+}
+.chalk{
+    grid-area: s1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.shop_h3{
+    padding-bottom: 30px;
+    font-size: 35px;
+}
+.shop_img{
+    object-fit: scale-down;
+    height: 200px;
+}
+.shop_p{
+    padding-top: 20px;
+    font-size: 30px;
+}
+.proteinpulver{
+    grid-area: s2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lyftarbalte{
+    grid-area: s3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.massagepistol{
+    grid-area: s4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.kettlebell{
+    grid-area: s5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hantelset{
+    grid-area: s6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.traningsskor{
+    grid-area: s7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.boxningshandskar{
+    grid-area: s8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.boxningssack{
+    grid-area: s9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 850px){
+    .wrapper_shop{
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+        "he"
+        "s1"
+        "s2"
+        "s3"
+        "s4"
+        "s5"
+        "s6"
+        "s7"
+        "s8"
+        "s9"
+        "fo";
+        grid-template-rows: repeat(11, 1fr);
+        grid-template-columns:1fr;
+    }
+        
+    .menu-button{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .menu-button{
+        cursor: pointer;
+        display: inline;
+
+    }
+    .menu-button i.material-icons{
+        font-size: 2.5rem;
+    }
+    .nav{
+        display: none;
+    }
+    .menu{
+        height: 100vh;
+        width: 80vw;
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        font-size: 25px;
+    }
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 5;
+    }
+    .show{
+        left: 0;
+        display: block;
+    }
+    .fade-layer.visible{
+        display: block;
+    }
+}
